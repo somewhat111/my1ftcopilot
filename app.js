@@ -138,9 +138,9 @@ function renderTodos() {
   remainingCount.textContent = `未完成:${unfinishedCount} 項`;
   emptyState.hidden = visibleTodos.length > 0;
   if (activeFilter === "active") {
-    emptyState.textContent = "沒有未完成的待辦事項。";
+    emptyState.textContent = "目前沒有未完成的事項，其他已完成項目可能被目前的篩選條件隱藏。";
   } else if (activeFilter === "completed") {
-    emptyState.textContent = "沒有已完成的待辦事項。";
+    emptyState.textContent = "目前沒有已完成的事項，其他未完成項目可能被目前的篩選條件隱藏。";
   } else {
     emptyState.textContent = "還沒有任何待辦事項，新增一個吧！";
   }
