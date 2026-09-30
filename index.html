@@ -10,7 +10,10 @@
   <main class="app-shell">
     <section class="todo-card" aria-labelledby="page-title">
       <header class="app-header">
-        <p class="eyebrow">DAILY FOCUS</p>
+        <div class="header-topline">
+          <p class="eyebrow">DAILY FOCUS</p>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"></button>
+        </div>
         <h1 id="page-title">待辦清單</h1>
         <p class="subtitle">把今天想完成的事，一件一件收進來。</p>
       </header>
@@ -27,6 +30,12 @@
         >
         <button type="submit">新增</button>
       </form>
+
+      <nav class="filter-bar" aria-label="待辦事項篩選">
+        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">全部</button>
+        <button class="filter-button" type="button" data-filter="active" aria-pressed="false">未完成</button>
+        <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">已完成</button>
+      </nav>
 
       <div class="todo-list" id="todo-list" aria-live="polite"></div>
       <p class="empty-state" id="empty-state">還沒有任何待辦事項,新增一個吧!</p>
