@@ -185,6 +185,11 @@ todoForm.addEventListener("submit", (event) => {
 });
 
 clearCompletedButton.addEventListener("click", () => {
+  const shouldClear = window.confirm("確定要清除所有已完成的事項嗎？");
+  if (!shouldClear) {
+    return;
+  }
+
   todos = todos.filter((todo) => !todo.completed);
   saveTodos();
   renderTodos();
